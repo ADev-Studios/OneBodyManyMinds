@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Body, Many Minds - Official Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="brand-title">🧙‍♂️ One Body, Many Minds</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="forum.html">General Forum</a></li>
+      <li><a href="ideas.html">Task Ideas</a></li>
+      <li><a href="bugs.html">Bug Reports</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>One Body, Many Minds</h1>
+      <p>A chaotic 2.5D top-down P2P party game where 2-8 players share control of a single adventurer.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎮 Play the Demo</h2>
+      <p style="margin-top: 10px;">Connect over Tube P2P using a room code to test the demo directly with your friends!</p>
+      
+      <div class="room-code-box">
+        <div id="roomCodeDisplay" class="code-display">WIZ4D</div>
+        <button class="btn" onclick="generateRoomCode()">Generate Code</button>
+        <button class="btn" onclick="copyRoomCode()">Copy</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💬 Community Feedback</h2>
+      <p>Have general feedback on the demo? Leave your thoughts below!</p>
+      <div class="giscus-frame"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
