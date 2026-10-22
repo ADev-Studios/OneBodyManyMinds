@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Announcements - One Body, Many Minds</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styling specifically for news posts */
+    .post-badge {
+      display: inline-block;
+      background-color: var(--accent-orange);
+      color: var(--bg-dark);
+      font-weight: bold;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+    .post-date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      float: right;
+    }
+    .post-title {
+      color: var(--accent-purple);
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .post-content p, .post-content ul {
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+    .post-content ul {
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -23,11 +53,31 @@
 
   <div class="container">
     <div class="page-header">
-      <h1>📣 Announcements</h1>
-      <p>Official developer news, patch notes, and demo updates!</p>
+      <h1>📣 Developer Announcements</h1>
+      <p>Official news, patch notes, and version releases from ADev-Studios!</p>
     </div>
 
+    <!-- Announcement Post #1 (Latest News) -->
+    <article class="card">
+      <span class="post-badge">v0.1.0 DEMO</span>
+      <span class="post-date">October 22, 2026</span>
+      <h2 class="post-title">🎉 Welcome to the Official Community Forum & Demo Update!</h2>
+      
+      <div class="post-content">
+        <p>WOO! The official <strong>One Body, Many Minds</strong> website and community hub is officially live!</p>
+        <p>Here is what we are currently working on for the upcoming P2P Demo build:</p>
+        <ul>
+          <li><strong>Tube P2P Networking:</strong> Seamless WebRTC joining using 5-character room codes.</li>
+          <li><strong>Sanctuary Map:</strong> Multi-room layout featuring dynamic 2D lighting and tile biomes.</li>
+          <li><strong>Task Engine:</strong> Testing the secret 30–60 second turn swaps and the Suspicion Notebook UI.</li>
+        </ul>
+        <p>Drop your comments, feedback, or secret task ideas in the forum sections above!</p>
+      </div>
+    </article>
+
+    <!-- Community Comment Section Below the Post -->
     <div class="card">
+      <h3 style="color: var(--accent-orange); margin-bottom: 15px;">💬 Announcement Discussion</h3>
       <div class="giscus-frame"></div>
     </div>
   </div>
