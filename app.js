@@ -1,20 +1,32 @@
-// Mapping of pages to your actual GitHub Discussion Categories & IDs
+// Mapping of pages to your exact GitHub Discussion Categories & IDs
 const CATEGORY_MAP = {
     "index.html": {
         category: "Feedback",
+        categoryId: "DIC_kwDOVT0GwM4DJWv4"
+    },
+    "announcements.html": {
+        category: "Announcements",
+        categoryId: "DIC_kwDOVT0GwM4DJWv0"
+    },
+    "bugs.html": {
+        category: "Bugs",
+        categoryId: "DIC_kwDOVT0GwM4DJWv2"
+    },
+    "feedback.html": {
+        category: "Feedback",
         categoryId: "DIC_kwDOVT0GwM4DJwv4"
     },
-    "forum.html": {
+    "general.html": {
         category: "General",
-        categoryId: "YOUR_GENERAL_CATEGORY_ID_HERE"
+        categoryId: "DIC_kwDOVT0GwM4DJWv1"
     },
     "ideas.html": {
         category: "Ideas",
-        categoryId: "YOUR_IDEAS_CATEGORY_ID_HERE"
+        categoryId: "DIC_kwDOVT0GwM4DJWv3"
     },
-    "bugs.html": {
-        category: "Q&A",
-        categoryId: "YOUR_QNA_CATEGORY_ID_HERE"
+    "polls.html": {
+        category: "Polls",
+        categoryId: "DIC_kwDOVT0GwM4DJWv5"
     }
 };
 
@@ -42,11 +54,9 @@ function loadGiscus() {
     const container = document.querySelector('.giscus-frame');
     if (!container) return;
 
-    // Determine current page filename
     let pagePath = window.location.pathname.split("/").pop();
     if (!pagePath || pagePath === "") pagePath = "index.html";
 
-    // Fallback to Feedback category if page isn't explicitly matched
     const config = CATEGORY_MAP[pagePath] || CATEGORY_MAP["index.html"];
 
     const script = document.createElement('script');
