@@ -6,33 +6,43 @@
   <title>Announcements - One Body, Many Minds</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Styling specifically for news posts */
-    .post-badge {
-      display: inline-block;
-      background-color: var(--accent-orange);
-      color: var(--bg-dark);
-      font-weight: bold;
-      padding: 3px 10px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      margin-bottom: 10px;
+    /* Announcement Page Custom Styling */
+    .announcement-banner {
+      background: linear-gradient(135deg, #1e2030 0%, #363a4f 100%);
+      border: 1px solid #c6a0f6;
+      border-radius: 10px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      text-align: left;
     }
-    .post-date {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      float: right;
+
+    .announcement-banner h2 {
+      color: #f5a97f;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
     }
-    .post-title {
-      color: var(--accent-purple);
-      font-size: 1.6rem;
-      margin-bottom: 12px;
+
+    .announcement-banner p {
+      color: #a5adce;
+      font-size: 0.95rem;
     }
-    .post-content p, .post-content ul {
-      margin-bottom: 12px;
-      color: var(--text-main);
+
+    /* Highlighted Giscus Feed Card */
+    .announcements-feed-card {
+      background-color: #1e2030;
+      border: 2px solid #f5a97f;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
-    .post-content ul {
-      padding-left: 20px;
+
+    .feed-header {
+      color: #c6a0f6;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
   </style>
 </head>
@@ -54,30 +64,20 @@
   <div class="container">
     <div class="page-header">
       <h1>📣 Developer Announcements</h1>
-      <p>Official news, patch notes, and version releases from ADev-Studios!</p>
+      <p>Official news, patch notes, and version releases live from GitHub!</p>
     </div>
 
-    <!-- Announcement Post #1 (Latest News) -->
-    <article class="card">
-      <span class="post-badge">v0.1.0 DEMO</span>
-      <span class="post-date">October 22, 2026</span>
-      <h2 class="post-title">🎉 Welcome to the Official Community Forum & Demo Update!</h2>
-      
-      <div class="post-content">
-        <p>WOO! The official <strong>One Body, Many Minds</strong> website and community hub is officially live!</p>
-        <p>Here is what we are currently working on for the upcoming P2P Demo build:</p>
-        <ul>
-          <li><strong>Tube P2P Networking:</strong> Seamless WebRTC joining using 5-character room codes.</li>
-          <li><strong>Sanctuary Map:</strong> Multi-room layout featuring dynamic 2D lighting and tile biomes.</li>
-          <li><strong>Task Engine:</strong> Testing the secret 30–60 second turn swaps and the Suspicion Notebook UI.</li>
-        </ul>
-        <p>Drop your comments, feedback, or secret task ideas in the forum sections above!</p>
-      </div>
-    </article>
+    <!-- Announcement Featured Banner -->
+    <div class="announcement-banner">
+      <h2>📌 Latest Patch Notes & News</h2>
+      <p>Posts created in the GitHub Announcements category automatically stream below. Leave your replies, reactions, or questions directly on the thread!</p>
+    </div>
 
-    <!-- Community Comment Section Below the Post -->
-    <div class="card">
-      <h3 style="color: var(--accent-orange); margin-bottom: 15px;">💬 Announcement Discussion</h3>
+    <!-- Giscus Stream Card -->
+    <div class="announcements-feed-card">
+      <div class="feed-header">
+        <span>📰 Live Update Feed</span>
+      </div>
       <div class="giscus-frame"></div>
     </div>
   </div>
